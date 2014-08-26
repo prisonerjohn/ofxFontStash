@@ -68,7 +68,7 @@ bool ofxFontStash::setup( string fontFile, float lineHeightPercent , int texDime
 		stash->doKerning = 0; //kerning disabled by default
 		stashFontID = sth_add_font( stash, ofToDataPath( fontFile ).c_str() );
 		if ( stashFontID != 0){
-			ofLogNotice("ofxFontStash", "loaded font '%s' in texture (%d x %d)", fontFile.c_str(), texDimension, texDimension );
+			ofLogVerbose("ofxFontStash", "loaded font '%s' in texture (%d x %d)", fontFile.c_str(), texDimension, texDimension );
 			return true;
 		}else{
 			ofLogError("ofxFontStash", "Can't load font! '%s'", fontFile.c_str() );
